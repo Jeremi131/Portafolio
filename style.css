@@ -60,26 +60,26 @@
         justify-content: flex-end;
     }
 
-    .menu_nav{
+    .father .menu_nav{
+       
+        display: none;
+    }
+
+    .father .menu_show{
+        top: 40px;
         position: fixed;
         align-self: flex-end;
         min-height: 20vh;
         width: 100%;
-        top: -100%;
-        background-color:#FCDA68;
+        background-color:#fcd968fa;
         right: 0;
         text-align: center;
-        padding: 2rem 0;
+        padding-bottom: 2rem ;
         color: #222222;
         font-weight: bold;
         border-bottom-left-radius: 10%;
         border-bottom-right-radius: 10%;
-        transition: 0.5s;
-        
-    }
-
-    .menu_show{
-        top: 40px;
+        display: block;
     }
 
     .father ul li{
@@ -410,8 +410,13 @@
             position: fixed;
             width: 100%;
             height: 65px;
-            
         }
+
+        .father ul li:hover {
+            color: #8e7bef;
+        }
+
+        
 
         .navbar ul{
             display: flex;
