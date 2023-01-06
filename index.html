@@ -9,8 +9,17 @@
 </head>
 <body>
 <div class="ff-Inter father">
-    <div class="menu"><img src="./src/Íconos/menu.svg" alt="menu"></div>
+    
+    <div id="color" class="icon_menu"><img src="./src/Íconos/menu.svg" alt="menu"></div>
 
+        <ul class="menu_nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#experiencia_y_habilidades">Experiencia y habilidades</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#Contacto">Contacto</a></li>
+        </ul>
+    
+    
 <div class="navbar">
     <ul>
         <li><a href="#home">Home</a></li>
@@ -50,7 +59,7 @@
             <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 5.91636C6.85313 5.91636 5.91719 6.85217 5.91719 7.99889C5.91719 9.14561 6.85313 10.0814 8 10.0814C9.14688 10.0814 10.0828 9.14561 10.0828 7.99889C10.0828 6.85217 9.14688 5.91636 8 5.91636ZM14.2469 7.99889C14.2469 7.13651 14.2547 6.28194 14.2063 5.42112C14.1578 4.42125 13.9297 3.53388 13.1984 2.80273C12.4656 2.07001 11.5797 1.84348 10.5797 1.79505C9.71719 1.74662 8.8625 1.75443 8.00156 1.75443C7.13906 1.75443 6.28438 1.74662 5.42344 1.79505C4.42344 1.84348 3.53594 2.07158 2.80469 2.80273C2.07187 3.53544 1.84531 4.42125 1.79687 5.42112C1.74844 6.2835 1.75625 7.13807 1.75625 7.99889C1.75625 8.85971 1.74844 9.71584 1.79687 10.5767C1.84531 11.5765 2.07344 12.4639 2.80469 13.1951C3.5375 13.9278 4.42344 14.1543 5.42344 14.2027C6.28594 14.2512 7.14063 14.2433 8.00156 14.2433C8.86407 14.2433 9.71875 14.2512 10.5797 14.2027C11.5797 14.1543 12.4672 13.9262 13.1984 13.1951C13.9313 12.4623 14.1578 11.5765 14.2063 10.5767C14.2563 9.71584 14.2469 8.86127 14.2469 7.99889V7.99889ZM8 11.2031C6.22656 11.2031 4.79531 9.77208 4.79531 7.99889C4.79531 6.2257 6.22656 4.79464 8 4.79464C9.77344 4.79464 11.2047 6.2257 11.2047 7.99889C11.2047 9.77208 9.77344 11.2031 8 11.2031ZM11.3359 5.41174C10.9219 5.41174 10.5875 5.07741 10.5875 4.66341C10.5875 4.2494 10.9219 3.91507 11.3359 3.91507C11.75 3.91507 12.0844 4.2494 12.0844 4.66341C12.0845 4.76172 12.0652 4.85908 12.0277 4.94993C11.9901 5.04078 11.935 5.12332 11.8654 5.19284C11.7959 5.26235 11.7134 5.31747 11.6225 5.35503C11.5316 5.3926 11.4343 5.41187 11.3359 5.41174V5.41174Z" fill="white"/>
             </svg>     
-        </a>
+            </a>
         </button>
 
         <button class="icon3"> <a href="https://twitter.com/?lang=es" target="_blank"> 
@@ -74,8 +83,9 @@
                     <path d="M22 6L12 13L2 6" fill="white"/>
                     <path d="M22 6L12 13L2 6" stroke="#8E7BEF" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                </a>
+            </a>
                 <span class="textbtn">Contáctame</span> 
+            
             </button>
         </div> 
     </section>
@@ -99,7 +109,7 @@
                 </div>  
             
             </div>
-        <hr class="experience uno"> 
+        <hr class="primero"> 
     
 
             <div class="experience dos">
@@ -111,7 +121,7 @@
         
             </div>
 
-        <hr>
+        <hr class="segundo">
 
             <div class="experience tres">
                 <div class="data_1">2019-2021</div>
@@ -124,17 +134,17 @@
             <h4 class="text_hability">Habilidades</h4>
 
             <div class="abilities">
-                <img src="./src/Íconos/mobile.svg" alt="phone">
-                    <p class="text">Mobile app desing</p> 
+                <img class="phone" src="./src/Íconos/mobile.svg" alt="phone">
+                    <p class="text uno">Mobile app desing</p> 
 
                 <img class="motion" src="./src/Íconos/motion.svg" alt="motion">
-                    <p class="text">Motion Desing</p>
+                    <p class="text dos">Motion Desing</p>
 
                 <img class= "material" src="./src/Íconos/material.svg" alt="material">
-                    <p class="text">Creacion y mantenimiento de sistemas de diseño</p>
+                    <p class="text tres">Creacion y mantenimiento de sistemas de diseño</p>
     
                 <img class="desing" src="./src/Íconos/design.svg" alt="desing">
-                    <p class="text">Gestión de proyectos</p>
+                    <p class="text cuatro">Gestión de proyectos</p>
             </div>
         </div>
     </section>
@@ -144,8 +154,8 @@
 <!----------------------------------------P O R T A F O L I O------------------------------------>
     <section id="portafolio">
         <div class="portafolio">
-            <h1 class="tittle">Portafolio<h1>
-
+            <h1 class="tittle">Portafolio</h1>
+            
             <div class="example primero">
                 <h3 class="sub_text">Beauty app</h3>
                 <img class="image" src="./src/Imágenes/ejemplo 3.png" alt="example3">
@@ -171,7 +181,7 @@
         <h1 class="back_title">Contacto</h1>
 
 
-        <div class="outline_icons"></div>
+        <div class="outline_icons">
 
         <div class="contact images">
             <img src="./src/Íconos/phone.svg" alt="phone">
@@ -189,10 +199,12 @@
             <p class="phone_number">5526885424</p>
             <p class="email">example@correo.com</p>
         </div>
-
+    </div>
         <h4 class="End_text">Hecho con <p>💜</p>en Academlo</h4>
     
     </div>
 </section>
+
+<script src="./main.js"></script>
 </body>
 </html>
