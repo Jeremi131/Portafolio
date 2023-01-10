@@ -1,4 +1,18 @@
+// ---------------------------- LOAD SCREEN -----------------------
+window.addEventListener("load", function() {
+    const load = document.querySelector(".load")
+
+    setTimeout( function(){
+        load.style.display = "none"
+    }, 3000);
+
+})
+
+
+//------------------------------ MENU ------------------------------------
+
 const iconMenu = document.querySelector("#color");
+const div = document.querySelector("#div");
 const menu = document.querySelector("#menu_nav");
 const cerrarHome = document.querySelector("#close_home")
 const cerrarExperience = document.querySelector("#close_experience")
@@ -14,10 +28,10 @@ iconMenu.addEventListener('click', function () {
         menu.className = "menu_nav";
     }
 
-    if (iconMenu.className == "icon_menu") {
-        iconMenu.className = "change-color";
+    if (div.className == "icon_menu") {
+        div.className = "change-color";
     } else { 
-        iconMenu.className = "icon_menu";
+        div.className = "icon_menu";
     }
 });
 
@@ -26,8 +40,8 @@ cerrarHome.addEventListener('click', function () {
         menu.className = "menu_nav";
     } 
 
-    if (iconMenu.className == "change-color") {
-        iconMenu.className = "icon_menu";
+    if (div.className == "change-color") {
+        div.className = "icon_menu";
     }
 })
 
@@ -36,8 +50,8 @@ cerrarExperience.addEventListener('click', function () {
         menu.className = "menu_nav";
     } 
 
-    if (iconMenu.className == "change-color") {
-        iconMenu.className = "icon_menu";
+    if (div.className == "change-color") {
+        div.className = "icon_menu";
     }
 })
 
@@ -46,8 +60,8 @@ cerrarPortafolio.addEventListener('click', function () {
         menu.className = "menu_nav";
     } 
 
-    if (iconMenu.className == "change-color") {
-        iconMenu.className = "icon_menu";
+    if (div.className == "change-color") {
+        div.className = "icon_menu";
     }
 })
 
@@ -56,8 +70,8 @@ cerrarContacto.addEventListener('click', function () {
         menu.className = "menu_nav";
     } 
 
-    if (iconMenu.className == "change-color") {
-        iconMenu.className = "icon_menu";
+    if (div.className == "change-color") {
+        div.className = "icon_menu";
     }
 })
 
