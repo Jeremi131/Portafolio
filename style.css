@@ -34,6 +34,7 @@
         --ScrollbarThumb: #d8d8d8;
         --Toogle: linear-gradient(90deg, rgba(78,106,227,1) 0%, rgba(74,194,93,1) 100%);
     }
+
     
     *{
         margin: 0px;
@@ -83,8 +84,6 @@
 
 
 
-
-
 /* ------------------------------------------------- S C R E E N  L O A D ------------------------------------------------ */
 
     .load{
@@ -97,7 +96,7 @@
         gap: 1rem;
         justify-content: center;
         align-items: center;
-        z-index: 1;
+        z-index: 2;
     }
     
     .loading{
@@ -151,9 +150,6 @@
 
 
 
-
-
-
     /* ----------------------------------------- M E N U ----------------------------------------- */
 
     .icon_menu{
@@ -178,6 +174,7 @@
         display: flex;
         justify-content: flex-end;
         transition: 0.3s;
+        z-index: 1;
     }
 
     #color{
@@ -649,9 +646,9 @@
             display: none;
         }
 
+        
 
-
-
+    /* ---------------------------------- T O O G L E ----------------------------------------------- */
 
         .container_toogle{
             grid-column: 2/3;
@@ -729,9 +726,6 @@
             width: 60%;
             align-self: center;
         }
-
-
-
 
 
 
