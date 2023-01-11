@@ -1,12 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-:root {
---Lightblue: #8e7bef;
---Gray: #222222;
---Lightyellow: #FCDA68;
---Lightgray: #423F40;
---White: #FFFFFF;
---Cream: #F9F5F2;
+    :root {
+        --Button: #8e7bef;
+        --Container: #FCDA68;
+        --Text1: #222222;
+        --Text2: #423F40;
+        --Text3: #FFFFFF;
+        --Contact: #f6f2f9;
+        --Body: #f8f8f8;
+        --Menu: #ffcb1f;
+        --navBar: #9d8afd;
+        --menuShow: #9d8afdf6;
+        --Ball: #ffffff;
+        --Scrollbar: hsl(0, 0%, 85%);
+        --ScrollbarThumb: #423F40;
+        --Toogle: linear-gradient(90deg, rgba(78,106,227,1) 0%, rgba(74,194,93,1) 100%);
+
+    }
+
+    body.darkmode{
+        --Button: #3c5fcf;
+        --Container: #360b0b;
+        --Text1: #ffffff;
+        --Text2: #e2e2e2;
+        --Text3: #FFFFFF;
+        --Contact: #02020c;
+        --Body: #040413;
+        --Menu: #b30909;
+        --navBar: #202457;
+        --menuShow: #202457f5;
+        --Ball: #02000a;
+        --Scrollbar: #262626;
+        --ScrollbarThumb: #d8d8d8;
+        --Toogle: linear-gradient(90deg, rgba(78,106,227,1) 0%, rgba(74,194,93,1) 100%);
     }
     
     *{
@@ -28,14 +54,41 @@
         padding-top: 2rem ;
     }
     .father ul li:active {
-        color: #8e7bef;
+        color:var(--Button);
     }
 
+    
+    .father{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        overflow: hidden;
+    }
+
+    body{
+        background-color: var(--Body);
+    }
+
+    section .home{
+        padding-top: 4rem;
+    }
+
+    section .experiencia_y_habilidades{
+        width: 100%;
+        background-color:var(--Container);
+    }
+
+
+
+
+
+
+/* ------------------------------------------------- S C R E E N  L O A D ------------------------------------------------ */
 
     .load{
         width: 100vw;
         height: 100vh;
-        background-color:var(--Cream);
+        background-color:var(--Contact);
         position: fixed;
         display: flex;
         flex-direction: column;
@@ -46,7 +99,7 @@
     }
     
     .loading{
-        color: #222222;
+        color:var(--Text1);
         font-weight: 600;
     }
     
@@ -65,77 +118,71 @@
         }
     }
 
+
+
+
+
+
+
+    /* ------------------------------------------ S C R O L L B A R ------------------------------------------ */
+
     html{
         scroll-behavior: smooth;
     }
 
     body::-webkit-scrollbar {
         width: 0.7rem;
-        background-color:hsl(0, 0%, 85%);
+        background-color:var(--Scrollbar);
     }
 
     body::-webkit-scrollbar-thumb {
-        background:var(--Lightgray);
+        background:var(--ScrollbarThumb);
         border-radius: 8px;
         border: 2px solid transparent;
         background-clip: content-box;
     }
 
     body::-webkit-scrollbar-thumb:hover {
-        background:var(--Gray);
+        background:var(--Text1);
         border-radius: 8px;
         border: 2px solid transparent;
         background-clip: content-box;
     }
      
 
-    .father{
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        overflow: hidden;
-    }
-
-    body{
-        background-color: var(--White);
-    }
-
-    section .home{
-        padding-top: 4rem;
-    }
 
 
-    .icon_menu .logo{
-        left: 0;
-        font-size: 20px;
-        font-weight: bold;
-    }
+
+
+
+    /* ----------------------------------------- M E N U ----------------------------------------- */
 
     .icon_menu{
         padding: .7rem;
         position: fixed;
         width: 100%;
-        background-color:#FFFFFF;
+        background-color:var(--Body);
         display: flex;
         justify-content: flex-end;
         box-shadow: 0 1px 4px hsl(0deg 4% 15% / 20%);
-        transition: .3s;
+        transition: 0.3s;
+        z-index: 1;
     }
 
     .change-color{
-        background-color:var(--Lightblue);
+        background-color:var(--navBar);
         padding: .7rem;
         position: fixed;
         width: 100%;
         display: flex;
         justify-content: flex-end;
-        transition: .1s;
+        transition: 0.3s;
     }
 
     #color{
         border: none;
         background: none;
-        color: #ffcb1f;
+        color:var(--Menu);
         font-size: 24px;
     }
 
@@ -150,16 +197,19 @@
         align-self: flex-end;
         min-height: 20vh;
         width: 100%;
-        background-color:#8e7beffa;
+        background-color:var(--menuShow);
         right: 0;
         text-align: center;
         padding-bottom: 2rem ;
-        color: #222222;
+        color: var(--Text1);
         font-weight: bold;
         border-bottom-left-radius: 10%;
         border-bottom-right-radius: 10%;
         display: block;
         box-shadow: 0 1px 4px hsl(0deg 4% 15% / 20%);
+        z-index: 1;
+
+
         }
 
 
@@ -172,10 +222,50 @@
     }
 
 
-    section .experiencia_y_habilidades{
-        width: 100%;
-        background-color:#FCDA68;
+
+
+
+
+
+
+    /* --------------------------------------- TOOGLE ---------------------------------------- */
+
+    .container_toogle{
+        display: flex;
+        justify-content: right;
+        padding: 0 3rem;
     }
+
+    .toogle{
+        height: 25px;
+        width: 50px;
+        background: var(--Toogle);
+        border-radius: 3rem;
+        margin-top: 80px;
+        align-self: center;
+        position: relative;
+        }
+
+    .ball{
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: var(--Ball);
+        margin-top: 2.4px;
+        margin-left: 3px;
+        position: absolute;
+        cursor: pointer;
+
+        transition:all 0.5s;
+    }
+
+    .ball_active{
+        margin-left: 27px;
+    }
+
+
+
+
 
 
 
@@ -199,7 +289,7 @@
         font-size: 50px;
         font-weight: 600;
         text-align: center;
-        color: #222222;
+        color:var(--Text1);
         
     }
 
@@ -209,7 +299,7 @@
         font-weight: 600;
         text-align: center;
         gap: 1rem;
-        color: #423F40;
+        color: var(--Text2);
     }
 
     .paragrahp{
@@ -219,11 +309,11 @@
         font-size: 20px;  
         text-align: center;
         justify-content: center;
-        color: #8e7bef;
+        color: var(--Button);
     }
 
     .replay{
-        color:#423F40;
+        color:var(--Text2);
     }
 
 
@@ -234,7 +324,7 @@
     }
     
     .icon1, .icon2, .icon3{
-        background-color: #8e7bef;
+        background-color: var(--Button);
         border-radius: 50%;
         width: 35px;
         height: 35px;
@@ -259,8 +349,8 @@
 
     .bottom{
         display: flex;
-        background-color:#8e7bef;
-        color: #F9F5F2;
+        background-color:var(--Button);
+        color: var(--Text3);
         justify-content: center;
         align-items: center;
         gap: 1rem;
@@ -278,6 +368,11 @@
 
     
 
+
+
+
+
+
 /* --------------------------E X P E R I E N C I A  Y  H A B I L I D A D E S-------------------------- */
 
     .experiencia_y_habilidades{
@@ -290,19 +385,20 @@
     }
 
     .experiencia_y_habilidades .tittle{
-        color:#222222;
+        color:var(--Text1);
         font-weight:600;
         font-size: 32px;
     }
 
     .experiencia_y_habilidades .paragrahp2{
-        color: #423F40;
+        color: var(--Text2);
        font-size: 20px;
        font-weight: 600;
     }
 
     .experiencia_y_habilidades .subtittle{
       font-weight: 600;
+      color: var(--Text1);
     }
 
 
@@ -319,39 +415,48 @@
     .father hr {
         border: none;
         height: 1px;
-        background-color:#423F40;
+        background-color:var(--Text2);
     }
 
     .data_1, .data_3{
-        color: #423F40;
+        color: var(--Text2);
     }
 
     .data_2{
         font-weight: bold;
+        color: var(--Text1);
     }
 
     .abilities .text{
        font-weight: 400;
        text-align: center;
        margin-bottom: 30px;
+       color: var(--Text1);
        
     }
 
     .experiencia_y_habilidades .text_hability{
-        color:#222222;
+        color:var(--Text1);
         margin-top: 30px;
         margin-bottom: 10px;
     }
 
     .abilities {
         display: grid;
-       justify-items: center;
+        justify-items: center;
     }
 
     .abilities .text{
-        color:#222222;
+        color:var(--Text1);
         font-weight: bold;
     }
+
+
+
+
+
+
+
 
 
     /* ------------------------------------P O R T A F O L I O---------------------------------------*/
@@ -368,13 +473,13 @@
 
     .portafolio .tittle{
         margin-top: 40px;
-        color: #222222;
+        color: var(--Text1);
         width: fit-content;
        
     }
 
     .example .sub_text{
-        color: #8e7bef;
+        color: var(--Button);
         margin-top: 10px;
         font-size: 20px;
         font-weight: bold;
@@ -393,11 +498,16 @@
     
 
 
+
+
+
+
+
     /*-------------------------------------C O N T A C T O---------------------------------------*/
 
     .contacto .back_title{
         font-size: 32px;
-        color: #423F40;
+        color: var(--Text2);
         text-align: center;
         font-weight: 600;
     }
@@ -413,7 +523,7 @@
     }
 
     .contacto .images img {
-        background-color:#F9F5F2;
+        background-color:var(--Contact);
         border-radius: 50%;
         padding: 20px;
     }
@@ -423,7 +533,7 @@
     }
 
     .contacto .contact_subtittle{
-        color:#222222;
+        color:var(--Text1);
         font-weight: bold;
         display: flex;
         justify-content: space-between;
@@ -440,7 +550,7 @@
     .contacto .contact_information{
         font-weight: 400;
         font-size: small;
-        color: #423F40;
+        color: var(--Text2);
         display: flex;
         justify-content: space-between;
     }
@@ -458,20 +568,26 @@
     .Git{
         padding-top: 3rem;
         text-align: center;
-        color: #222222;
+        color: var(--Text2);
     }
 
     a.cambiar{
-        color: #8e7bef;
+        color: var(--Button);
     }
 
     .End_text{
-        color: #8e7bef;
+        color: var(--Button);
         margin-top: 50px;
         display: flex;
         justify-content: center;
         gap: 0.3rem;   
     }
+
+
+
+
+
+
 
 
 
@@ -495,12 +611,16 @@
             color: inherit;
         }
 
+
+
+
+
+
 /* ------------------------------------------- MENU NAV -------------------------------------------------- */
     
     
         .navbar{
-            background-color:#FFFFFF;
-            height: 50px;
+            background-color:var(--Body);
             display: flex;
             justify-content:right;
             padding: 0 1rem;
@@ -508,11 +628,12 @@
             position: fixed;
             width: 100%;
             height: 65px;
+            z-index: 1;
             box-shadow: 0 1px 4px hsl(0deg 4% 15% / 20%);
         }
 
         .father ul li:hover {
-            color: #8e7bef;
+            color: var(--Button);
             font-size: 16px;
         }
 
@@ -520,7 +641,7 @@
             display: flex;
             gap: 4rem;
             font-size: 14px;
-            color: #423F40;
+            color: var(--Text2);
             font-weight: 600;
         }
         
@@ -531,6 +652,13 @@
         .menu_nav{
             display: none;
         }
+
+
+
+
+
+
+
 
 /* ------------------------------------------ HOME DESKTOP ---------------------------------------- */
 
@@ -601,6 +729,12 @@
             width: 60%;
             align-self: center;
         }
+
+
+
+
+
+
 
 
 /* -------------------------------- EXPERIENCE DESKTOP ----------------------------------------- */
@@ -687,6 +821,7 @@
             grid-row: 2;
             font-size: 18px;
             font-weight: 400;
+            
         }
 
         .abilities .dos{
@@ -707,6 +842,8 @@
             font-size: 18px;
             font-weight: 400;
         }
+
+
 
 
 
@@ -746,6 +883,14 @@
             padding: none;
         }
 
+
+
+
+
+
+
+        
+
         /* ----------------------- C O N T A C T   D E S K T O P ----------------------------------- */
         .contacto .back_title{
            text-align: left;
@@ -761,7 +906,7 @@
         }
 
         .contacto .images img {
-            background-color:#F9F5F2 ;  
+            background-color:var(--Contact) ;  
             border-radius: 15px;
             padding: 25px;
         }

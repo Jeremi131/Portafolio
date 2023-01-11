@@ -9,6 +9,16 @@ window.addEventListener("load", function() {
 })
 
 
+// ------------------------------- T O O G L E -------------------------------------
+
+const ball =  document.querySelector(".ball");
+
+ball.addEventListener('click', function(){
+    ball.classList.toggle("ball_active");
+    document.body.classList.toggle("darkmode")
+});
+
+
 //------------------------------ MENU ------------------------------------
 
 const iconMenu = document.querySelector("#color");
