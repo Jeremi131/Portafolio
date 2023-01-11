@@ -67,6 +67,8 @@
 
     body{
         background-color: var(--Body);
+
+        transition: background-color 0.5s, color 0.5s;
     }
 
     section .home{
@@ -121,9 +123,6 @@
 
 
 
-
-
-
     /* ------------------------------------------ S C R O L L B A R ------------------------------------------ */
 
     html{
@@ -167,6 +166,8 @@
         box-shadow: 0 1px 4px hsl(0deg 4% 15% / 20%);
         transition: 0.3s;
         z-index: 1;
+
+        transition: background-color 0.5s, color 0.5s;
     }
 
     .change-color{
@@ -233,7 +234,7 @@
     .container_toogle{
         display: flex;
         justify-content: right;
-        padding: 0 3rem;
+        padding: 0 1rem;
     }
 
     .toogle{
@@ -241,7 +242,7 @@
         width: 50px;
         background: var(--Toogle);
         border-radius: 3rem;
-        margin-top: 80px;
+        margin-top: 10px;
         align-self: center;
         position: relative;
         }
@@ -457,8 +458,6 @@
 
 
 
-
-
     /* ------------------------------------P O R T A F O L I O---------------------------------------*/
 
     .portafolio{
@@ -496,8 +495,6 @@
     }
 
     
-
-
 
 
 
@@ -589,8 +586,6 @@
 
 
 
-
-
     /* -----------------------------------------------------D E S K T O P----------------------------------------------------- */
 
     @media ( min-width: 780px){
@@ -614,8 +609,6 @@
 
 
 
-
-
 /* ------------------------------------------- MENU NAV -------------------------------------------------- */
     
     
@@ -630,7 +623,10 @@
             height: 65px;
             z-index: 1;
             box-shadow: 0 1px 4px hsl(0deg 4% 15% / 20%);
+
+            transition: background-color 0.5s, color 0.5s;
         }
+
 
         .father ul li:hover {
             color: var(--Button);
@@ -657,7 +653,11 @@
 
 
 
-
+        .container_toogle{
+            grid-column: 2/3;
+            grid-row: 1;
+            height: 30px;
+        }
 
 
 /* ------------------------------------------ HOME DESKTOP ---------------------------------------- */
@@ -665,7 +665,7 @@
         .home{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: repeat(5, 100px);
+            grid-template-rows: 30px 100px 100px 100px 100px 100px;
             padding: 2rem;
             padding-left: 4rem;
             padding-right: 6rem;
@@ -681,7 +681,7 @@
 
         .principal_image{
             grid-column: 2/3;
-            grid-row: 1/6;
+            grid-row: 1/7;
             justify-content: center;
             align-items: center;  
             align-self: center;       
@@ -696,7 +696,7 @@
 
         .tittle{
             grid-column: 1/2;
-            grid-row: 1/2;
+            grid-row: 2/3;
         }
 
         .tittle .first_tittle{ 
@@ -716,7 +716,7 @@
 
         .icons {
             grid-column: 1/2;
-            grid-row: 4/5;
+            grid-row: 5/6;
             justify-content: left;
             height: fit-content;
             margin-left: 15px;
@@ -724,7 +724,7 @@
 
         .btn {
             grid-column: 1/2;
-            grid-row: 4/6;
+            grid-row: 5/7;
             margin-left: 15px;
             width: 60%;
             align-self: center;
@@ -886,9 +886,6 @@
 
 
 
-
-
-
         
 
         /* ----------------------- C O N T A C T   D E S K T O P ----------------------------------- */
@@ -906,7 +903,7 @@
         }
 
         .contacto .images img {
-            background-color:var(--Contact) ;  
+            background-color:var(--Contact);  
             border-radius: 15px;
             padding: 25px;
         }
