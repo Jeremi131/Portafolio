@@ -24,10 +24,10 @@ ball.addEventListener('click', function(){
 const iconMenu = document.querySelector("#color");
 const icon = document.querySelector("#menu");
 const menu = document.querySelector("#menu_nav");
-const closedHome = document.querySelector("#close_home")
-const closedExperience = document.querySelector("#close_experience")
-const closedPortafolio = document.querySelector("#close_portafolio")
-const closedContacto = document.querySelector("#close_contacto")
+const closedHome = document.querySelector("#closed_home")
+const closedExperience = document.querySelector("#closed_experience")
+const closedBriefcase = document.querySelector("#closed_briefcase")
+const closedContact = document.querySelector("#closed_contact")
 
 
 
@@ -65,7 +65,7 @@ closedExperience.addEventListener('click', function () {
     }
 })
 
-closedPortafolio.addEventListener('click', function () {
+closedBriefcase.addEventListener('click', function () {
     if (menu.className == "menu_show") {
         menu.className = "menu_nav";
     } 
@@ -75,7 +75,7 @@ closedPortafolio.addEventListener('click', function () {
     }
 })
 
-closedContacto.addEventListener('click', function () {
+closedContact.addEventListener('click', function () {
     if (menu.className == "menu_show") {
         menu.className = "menu_nav";
     } 
