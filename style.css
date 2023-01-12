@@ -55,7 +55,7 @@
         padding-top: 2rem ;
     }
     .father ul li:active {
-        color:var(--Button);
+        color:var(--Menu);
     }
 
     
@@ -698,7 +698,7 @@
 
         .tittle .first_tittle{ 
             text-align: left;
-            font-size: 80px;
+            font-size: 50px;
         }
 
         .tittle .second_tittle{
@@ -902,4 +902,18 @@
             padding: 25px;
         }
         
+    }
+
+    @media ( min-width: 900px){
+        .tittle .first_tittle{ 
+            text-align: left;
+            font-size: 65px;
+        }
+    }
+
+    @media ( min-width: 1024px){
+        .tittle .first_tittle{ 
+            text-align: left;
+            font-size: 70px;
+        }
     }

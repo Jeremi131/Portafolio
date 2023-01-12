@@ -22,12 +22,12 @@ ball.addEventListener('click', function(){
 //------------------------------ MENU ------------------------------------
 
 const iconMenu = document.querySelector("#color");
-const div = document.querySelector("#div");
+const icon = document.querySelector("#menu");
 const menu = document.querySelector("#menu_nav");
-const cerrarHome = document.querySelector("#close_home")
-const cerrarExperience = document.querySelector("#close_experience")
-const cerrarPortafolio = document.querySelector("#close_portafolio")
-const cerrarContacto = document.querySelector("#close_contacto")
+const closedHome = document.querySelector("#close_home")
+const closedExperience = document.querySelector("#close_experience")
+const closedPortafolio = document.querySelector("#close_portafolio")
+const closedContacto = document.querySelector("#close_contacto")
 
 
 
@@ -38,50 +38,50 @@ iconMenu.addEventListener('click', function () {
         menu.className = "menu_nav";
     }
 
-    if (div.className == "icon_menu") {
-        div.className = "change-color";
+    if (icon.className == "icon_menu") {
+        icon.className = "change-color";
     } else { 
-        div.className = "icon_menu";
+        icon.className = "icon_menu";
     }
 });
 
-cerrarHome.addEventListener('click', function () {
+closedHome.addEventListener('click', function () {
     if (menu.className == "menu_show") {
         menu.className = "menu_nav";
     } 
 
-    if (div.className == "change-color") {
-        div.className = "icon_menu";
+    if (icon.className == "change-color") {
+        icon.className = "icon_menu";
     }
 })
 
-cerrarExperience.addEventListener('click', function () {
+closedExperience.addEventListener('click', function () {
     if (menu.className == "menu_show") {
         menu.className = "menu_nav";
     } 
 
-    if (div.className == "change-color") {
-        div.className = "icon_menu";
+    if (icon.className == "change-color") {
+        icon.className = "icon_menu";
     }
 })
 
-cerrarPortafolio.addEventListener('click', function () {
+closedPortafolio.addEventListener('click', function () {
     if (menu.className == "menu_show") {
         menu.className = "menu_nav";
     } 
 
-    if (div.className == "change-color") {
-        div.className = "icon_menu";
+    if (icon.className == "change-color") {
+        icon.className = "icon_menu";
     }
 })
 
-cerrarContacto.addEventListener('click', function () {
+closedContacto.addEventListener('click', function () {
     if (menu.className == "menu_show") {
         menu.className = "menu_nav";
     } 
 
-    if (div.className == "change-color") {
-        div.className = "icon_menu";
+    if (icon.className == "change-color") {
+        icon.className = "icon_menu";
     }
 })
 
