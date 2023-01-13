@@ -9,13 +9,14 @@ window.addEventListener("load", function() {
 })
 
 
-// ------------------------------- T O O G L E -------------------------------------
+// ------------------------------- T O O G L E  D A R K  M O D E -------------------------------------
 
 const ball =  document.querySelector(".ball");
 
+
 ball.addEventListener('click', function(){
-    ball.classList.toggle("ball_active");
-    document.body.classList.toggle("darkmode")
+ball.classList.toggle("ball_active");
+document.body.classList.toggle("darkmode");
 });
 
 
